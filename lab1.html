@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Барилюк Лаборатоная работа №1</title>
+</head>
+<body>
+<script type="text/javascript">
+var xInitial = Number(+prompt("Введите Х начальное"));
+var xFinal = Number(+prompt("Введите Х конечное"));
+var dx = Number(+prompt("Введите шаг"));
+var accuracy = Number(+prompt("введите количество знаков после запятой в результате"));
+var result = 0; //сумма
+for(let i = xInitial; i <= xFinal; i += dx)
+	{
+		result = Math.pow(2.71828, (-i)); //математическая константа, основание натурального логарифма, тк 1500 знаков после запятой, я сократил ее вот так.
+		console.log(result.toFixed(accuracy));// toFixed - это метод, который 
+	}
+</script>
+</body>
+</html>
