@@ -7,16 +7,18 @@
 </head>
 <body>
 <script type="text/javascript">
-var xInitial = Number(+prompt("Введите Х начальное"));
-var xFinal = Number(+prompt("Введите Х конечное"));
-var dx = Number(+prompt("Введите шаг"));
-var accuracy = Number(+prompt("введите количество знаков после запятой в результате"));
-var result = 0; //сумма
-for(let i = xInitial; i <= xFinal; i += dx)
-	{
-		result = Math.pow(2.71828, (-i)); //математическая константа, основание натурального логарифма, тк 1500 знаков после запятой, я сократил ее вот так.
-		console.log(result.toFixed(accuracy));// toFixed - это метод, который форматирует числовое значение в строковое, сохраняя при этом указанное количество десятичных знаков
-	}
+
+function factorial(n) {
+  return (n != 1) ? n * factorial(n - 1) : 1;
+}
+
+var n = Number(prompt("Введите n "));
+var x = Number(prompt("Введите x "));
+var result = 0;
+for(let i = 1; i <= n; i++) result += Math.pow(-1, (n)) * Math.pow(x, n) / factorial(n); 
+
+alert(result);
+	
 </script>
 </body>
 </html>
