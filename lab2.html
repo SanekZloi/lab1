@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Барилюк Лаборатоная работа №2</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function factorial(n){ //сделал циклом, как вы и просили =)
+    var result = 1;
+    while(n)
+    {
+        result *= n--;
+    }
+    return result;
+}
+
+function getResult()
+{
+	var n = Number(document.getElementById("n").value); //это метод, с помощью которого можно обратиться к элементу страницы по его идентификатору "id"
+	var x = Number(document.getElementById("x").value);
+
+	var result = 0;
+
+	for(let i = 1; i <= n; i++) result += Math.pow(-1, (n)) * Math.pow(x, n) / factorial(n); 
+
+	res.innerHTML = result; //иннер засовывает в тег а результ
+}
+</script>
+
+<input type="text" id="x" value="введите x">
+<br><br>
+
+<input type="text" id="n" value="введите n">
+<br><br>
+
+<input type="submit" onclick="getResult()">
+<br><br>
+
+<label>Результат: </label><a id="res"></a>
+
+	
+</body>
+</html>
